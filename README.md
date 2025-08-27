@@ -21,3 +21,23 @@ Error-Handling
 Liest bestehende Foomuuri-Configs
 Generiert saubere .conf-Dateien
 Validierung beim Apply
+
+
+Installation & Nutzung:
+# Dependencies installieren
+sudo apt install python3-dev  # Linux
+# oder für Windows: pip install windows-curses
+
+# Ausführen
+sudo python3 foomuuri-tui.py
+
+einfache zu erweitern:
+# Neue Services hinzufügen:
+COMMON_SERVICES.append("custom-service")
+
+# Neue NAT-Typen:
+nat_types = ["dnat", "snat", "masquerade", "redirect"]
+
+# IPv6-Support:
+def _add_ipv6_rule(self):
+    # Easy to add!
